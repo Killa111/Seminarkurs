@@ -8,6 +8,8 @@ TagManager:
   - Field
   - Obstacle
   - MoveRange
+  - CameraPlayer
+  - Hero
   layers:
   - Default
   - TransparentFX
