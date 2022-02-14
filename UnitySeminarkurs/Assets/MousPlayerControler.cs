@@ -24,11 +24,11 @@ public class MousPlayerControler : MonoBehaviour
             bool foundField = false;                                    // got an Field hit
             bool foundMoveRange = false;                                // got the MoveRange hit
 
+            float nearestHitField = Mathf.Infinity;                     // distance to nearest hit Field, currently infinity
+
             hits = Physics.RaycastAll(ray);                             // shoots ot the ray, stores everything it hits in hits
 
-            float nearestHitField = Mathf.Infinity;                     // distance to nearest hit Field
-            
-            for(int i = 0; i < hits.Length; i++)                        // for loop goes through all the hits stored in hit
+            for (int i = 0; i < hits.Length; i++)                        // for loop goes through all the hits stored in hit
             {
                 if(hits[i].transform.tag == "Field")                    // checks if a object with the tag Field got hit
                 {
@@ -38,9 +38,7 @@ public class MousPlayerControler : MonoBehaviour
                         nearestHitField = Vector3.Distance(posCam.position, hits[i].point);
                         foundField = true;
                     }
-                }
-
-                if(hits[i].transform.name == nameMoveRange)             // checks if the MoveRange got hit
+                } else if(hits[i].transform.name == nameMoveRange)             // checks if the MoveRange got hit
                 {
                     foundMoveRange = true;
                 }                
@@ -48,7 +46,7 @@ public class MousPlayerControler : MonoBehaviour
 
             if(foundField == true & foundMoveRange == true)        
             {
-                meshAgent.SetDestination(hitUse.point);
+                meshAgent.SetDestination(hitUse.transform.position);
             }            
         }
     }

@@ -10,6 +10,7 @@ TagManager:
   - MoveRange
   - CameraPlayer
   - Hero
+  - AttackRange
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - Player
   - Obstacle
   - MoveRange
-  - 
-  - 
+  - AttackRange
+  - Hero
   - 
   - 
   - 
