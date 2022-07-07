@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MousPlayerControler : MonoBehaviour
+public class MousPlayerMovement : MonoBehaviour
 {
+    public GameObject goGameCode;
 
     public Camera mainCam;
 
@@ -12,10 +13,23 @@ public class MousPlayerControler : MonoBehaviour
 
     public string nameMoveRange;
 
+    public bool moved = false;
+
+    public void notMoved()
+    {
+        moved = false;
+    }
+
+    public bool alreadyMoved()
+    {
+        return moved;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))    // check if left Mouse Button is klicked
+        if (Input.GetMouseButtonDown(0) && moved == false)    // check if left Mouse Button is klicked
+                                                              // & there hasn't already been a move
         {
             Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);    // create a ray, from the mainCam,
                                                                         // in the dirrection of the current mouseposition
@@ -44,9 +58,11 @@ public class MousPlayerControler : MonoBehaviour
                 }                
             }
 
-            if(foundField == true & foundMoveRange == true)        
+            if (foundField == true & foundMoveRange == true)   
             {
-                meshAgent.SetDestination(hitUse.transform.position);
+                meshAgent.SetDestination(hitUse.transform.position);        // move on the field that got hit
+                goGameCode.GetComponent<Game>().beginnWalkingAnimation();
+                moved = true;
             }            
         }
     }
