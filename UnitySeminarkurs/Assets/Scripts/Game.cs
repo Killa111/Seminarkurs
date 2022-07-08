@@ -51,6 +51,9 @@ public class Game : MonoBehaviour
     private bool[] heroesMoved = new bool[] { false, false, false };
     private bool[] heroesAttacked = new bool[] { false, false, false };
 
+    private bool[] dead0Heroes = new bool[] { false, false, false };
+    private bool[] dead1Heroes = new bool[] { false, false, false };
+
     bool canChooseHero = false;
 
     int progressRound = 0;          // stores which progress is made in this round
@@ -92,20 +95,80 @@ public class Game : MonoBehaviour
         {
             currentSide = '1';
             goCamController.GetComponent<MoveCamera>().changeToSide1();
+            // reset progress and show that the dead Heroes already moved to ignore them
+            if (!dead1Heroes[0])
+            {
+                heroesMoved[0] = false;
+                heroesAttacked[0] = false;
+            }
+            else
+            {
+                heroesMoved[0] = true;
+                heroesAttacked[0] = true;
+            }
+
+            if (!dead1Heroes[1])
+            {
+                heroesMoved[1] = false;
+                heroesAttacked[1] = false;
+            }
+            else
+            {
+                heroesMoved[1] = true;
+                heroesAttacked[1] = true;
+            }
+
+            if (!dead1Heroes[2])
+            {
+                heroesMoved[2] = false;
+                heroesAttacked[2] = false;
+            }
+            else
+            {
+                heroesMoved[2] = true;
+                heroesAttacked[2] = true;
+            }
         }
         else
         {
             currentSide = '0';
             goCamController.GetComponent<MoveCamera>().changeToSide0();
+            // reset progress and show that the dead Heroes already moved to ignore them
+            if (!dead0Heroes[0])
+            {
+                heroesMoved[0] = false;
+                heroesAttacked[0] = false;
+            }
+            else
+            {
+                heroesMoved[0] = true;
+                heroesAttacked[0] = true;
+            }
+
+            if (!dead0Heroes[1])
+            {
+                heroesMoved[1] = false;
+                heroesAttacked[1] = false;
+            }
+            else
+            {
+                heroesMoved[1] = true;
+                heroesAttacked[1] = true;
+            }
+
+            if (!dead0Heroes[2])
+            {
+                heroesMoved[2] = false;
+                heroesAttacked[2] = false;
+            }
+            else
+            {
+                heroesMoved[2] = true;
+                heroesAttacked[2] = true;
+            }
         }
 
         // reset progress
-        heroesMoved[0] = false;
-        heroesMoved[1] = false;
-        heroesMoved[2] = false;
-        heroesAttacked[0] = false;
-        heroesAttacked[1] = false;
-        heroesAttacked[2] = false;
         heroChoosen = false;
         progressRound = 0;
     }
@@ -128,6 +191,44 @@ public class Game : MonoBehaviour
     {
         goAttackedHero.GetComponent<Stats>().decreaseCurrentHealth(
             goAttackingHero.GetComponent<Stats>().getAttack());     // decreases the health of the attacked
+
+        if (!goAttackedHero.GetComponent<Stats>().getAlive())       // checks if the Hero is dead
+        {
+            switch (goAttackedHero.transform.name)
+            {
+                case "0Hero0":
+                    dead0Heroes[0] = true;
+                    go0Hero0.SetActive(false);
+                    break;
+
+                case "0Hero1":
+                    dead0Heroes[1] = true;
+                    go0Hero1.SetActive(false);
+                    break;
+
+                case "0Hero2":
+                    dead0Heroes[2] = true;
+                    go0Hero2.SetActive(false);
+                    break;
+
+                case "1Hero0":
+                    dead1Heroes[0] = true;
+                    go1Hero0.SetActive(false);
+                    break;
+
+                case "1Hero1":
+                    dead1Heroes[1] = true;
+                    go1Hero1.SetActive(false);
+                    break;
+
+                case "1Hero2":
+                    dead1Heroes[2] = true;
+                    go1Hero2.SetActive(false);
+                    break;
+            }
+
+
+        }
     }
 
     // Update is called once per frame
