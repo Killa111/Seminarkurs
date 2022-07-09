@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class Game : MonoBehaviour
 {
+    public GameObject goReturnButton;
+    public GameObject goWinnerSign;
+    public TMP_Text goWinenerText;
+
     public GameObject goCamController;
     public GameObject goMainCam;
     public Camera mainCam;
@@ -65,12 +71,17 @@ public class Game : MonoBehaviour
 
     private void side0Won()
     {
+        goWinnerSign.SetActive(true);
+        goWinenerText.text = "Player  0  Winns";
+        goReturnButton.SetActive(false);
 
     }
 
     private void side1Won()
     {
-
+        goWinnerSign.SetActive(true);
+        goWinenerText.text = "Player  1  Winns";
+        goReturnButton.SetActive(false);
     }
 
     private void checkGameEnd()
@@ -231,6 +242,19 @@ public class Game : MonoBehaviour
         }
     }
 
+    public void resetHeroSelection()
+    {
+        if(progressRound == 2)      // if it gets checked if the hero moved, jupt to deactivate movement
+        {
+            progressRound = 3;
+        }
+
+        if (progressRound == 5)      // if it gets checked if the hero attacked, jupt to deactivate attack
+        {
+            progressRound = 6;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -276,7 +300,7 @@ public class Game : MonoBehaviour
                         {
                             // directly jump to the attack
 
-                            progressRound = 3;
+                            progressRound = 4;
                             break;
                         }
 
@@ -288,19 +312,23 @@ public class Game : MonoBehaviour
                     }
                     break;
 
-                case 2:         // deactivate movement 
+                case 2:         // check if walked
                     if (goCurrentHero.GetComponent<MousPlayerMovement>().alreadyMoved())
                     {
-                        goCurrentMovementRangeHero.SetActive(false);
-                        goCurrentHero.GetComponent<MousPlayerMovement>().enabled = false;
-
                         heroesMoved[currentHeroCoosen] = true;       // save that the hero moved
-                        progressRound = 0;          // chose a hero after moving
-                        heroChoosen = false;            // show that no hero was choosen
+                        progressRound = 3;
                     }
                     break;
 
-                case 3:     // allow hero to attack
+                case 3:         // deactivate movement
+                        goCurrentMovementRangeHero.SetActive(false);
+                        goCurrentHero.GetComponent<MousPlayerMovement>().enabled = false;
+
+                        progressRound = 0;          // chose a hero after moving
+                        heroChoosen = false;            // show that no hero was choosen
+                    break;
+
+                case 4:     // allow hero to attack
 
                     if (heroesAttacked[currentHeroCoosen])     // checks if the current hero already attacked
                     {
@@ -314,21 +342,25 @@ public class Game : MonoBehaviour
                         goCurrentHero.GetComponent<MousPlayerAttack>().notAttacked();
                         goCurrentAttackRangeHero.SetActive(true);
 
-                        progressRound = 4;
+                        progressRound = 5;
                     }
 
                     break;
-
-                case 4:     // deactivat attack
+                            
+                case 5:     // check if attacked
                     if (goCurrentHero.GetComponent<MousPlayerAttack>().alreadyAttacked())
-                    {
+                    { 
+                        heroesAttacked[currentHeroCoosen] = true;        // saves that the hero already moved
+                        progressRound = 6;
+                    }
+                    break;
+
+                case 6:     // deactivat attack
                         goCurrentAttackRangeHero.SetActive(false);
                         goCurrentHero.GetComponent<MousPlayerAttack>().enabled = false;
 
-                        heroesAttacked[currentHeroCoosen] = true;        // saves that the hero already moved
                         progressRound = 0;
                         heroChoosen = false;    // need to choose a new Hero
-                    }
                     break;
             }
         }

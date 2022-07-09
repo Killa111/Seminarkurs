@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 public class MousPlayerMovement : MonoBehaviour
 {
+    public GameObject goMovementRange;
     public GameObject goGameCode;
 
     public Camera mainCam;
@@ -63,6 +64,7 @@ public class MousPlayerMovement : MonoBehaviour
                 meshAgent.SetDestination(hitUse.transform.position);        // move on the field that got hit
                 goGameCode.GetComponent<Game>().beginnWalkingAnimation();
                 moved = true;
+                goMovementRange.SetActive(false);
             }            
         }
     }

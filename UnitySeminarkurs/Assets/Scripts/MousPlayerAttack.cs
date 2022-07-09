@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MousPlayerAttack : MonoBehaviour
 {
+    public GameObject goAttackRange;
     public GameObject goGameCode;
 
     public Camera mainCam;
@@ -84,6 +85,7 @@ public class MousPlayerAttack : MonoBehaviour
                         goGameCode.GetComponent<Game>().beginnAttackingAnimation(this.transform.name, this.transform.gameObject,
                             hitUse.transform.name, hitUse.transform.gameObject);
                         attacked = true;
+                        goAttackRange.SetActive(false);
                     }
                 }
             }
