@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44576722, g: 0.49548155, b: 0.57428396, a: 1}
+  m_IndirectSpecularColor: {r: 0.4457674, g: 0.4954816, b: 0.57428396, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -623,6 +623,10 @@ PrefabInstance:
     - target: {fileID: 165351468231099493, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563036439084073720, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
+      propertyPath: sceneId
+      value: 612720722
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
@@ -1222,6 +1226,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7563036439084073720, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
+      propertyPath: sceneId
+      value: 3244408782
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
 --- !u!4 &471052008 stripped
@@ -1441,6 +1449,10 @@ PrefabInstance:
     - target: {fileID: 165351468231099493, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563036439084073720, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
+      propertyPath: sceneId
+      value: 4294544519
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
@@ -2277,6 +2289,10 @@ PrefabInstance:
     - target: {fileID: 165351468231099493, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563036439084073720, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
+      propertyPath: sceneId
+      value: 842968107
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
@@ -3341,6 +3357,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7563036439084073720, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
+      propertyPath: sceneId
+      value: 270651676
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
 --- !u!1 &1575583428 stripped
@@ -3562,6 +3582,10 @@ PrefabInstance:
     - target: {fileID: 165351468231099493, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563036439084073720, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
+      propertyPath: sceneId
+      value: 777603537
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
@@ -4362,6 +4386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a2564407d08a1448ded49db2f5728b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOnline: 0
   goReturnButton: {fileID: 769930801}
   goWinnerSign: {fileID: 1316872525}
   goWinenerText: {fileID: 435204709}

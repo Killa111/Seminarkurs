@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+
+
+
 public class MousPlayerMovement : MonoBehaviour
 {
     public GameObject goMovementRange;
@@ -19,6 +22,15 @@ public class MousPlayerMovement : MonoBehaviour
     public void notMoved()
     {
         moved = false;
+    }
+
+    void Start()
+    {
+
+        mainCam = GameObject.Find("MainCamera").GetComponent<Camera>();
+        posCam = GameObject.Find("MainCamera").transform;
+        goMovementRange = GameObject.Find(nameMoveRange);
+        goGameCode = GameObject.Find("GameCode");
     }
 
     public bool alreadyMoved()
