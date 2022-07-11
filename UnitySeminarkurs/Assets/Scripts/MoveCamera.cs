@@ -29,11 +29,15 @@ public class MoveCamera : MonoBehaviour
     public void changeToSide0()
     {
         sideSwitched = 1;
+        transform.position = side0posCam;
+        transform.transform.rotation = side0rotateCam;
     }
 
     public void changeToSide1()
     {
         sideSwitched = -1;
+        transform.position = side1posCam;
+        transform.transform.rotation = side1rotateCam;
     }
 
 
