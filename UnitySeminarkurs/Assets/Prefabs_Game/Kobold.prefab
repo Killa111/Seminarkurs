@@ -358,7 +358,7 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   visible: 0
-  m_AssetId: 3684022f94c26f247ac14f50490a246b
+  m_AssetId: 86d496e8664805042a3271976ea90b17
   hasSpawned: 0
 --- !u!114 &3987225898934716721
 MonoBehaviour:
@@ -560,6 +560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kobold@Dwarf Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 43ae7e479f88f7b488732b085baac004, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43ae7e479f88f7b488732b085baac004, type: 3}
 --- !u!1 &4293075061226489882 stripped
@@ -657,6 +661,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 781eae0b35dfbd540a0c3094c1a9f096, type: 3}
       propertyPath: m_Name
       value: Kobold@Punching
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 781eae0b35dfbd540a0c3094c1a9f096, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 781eae0b35dfbd540a0c3094c1a9f096, type: 3}
@@ -756,6 +764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kobold@Dwarf Walk (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6f15585ed7b8ae4084adf7bc1a9c40b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f15585ed7b8ae4084adf7bc1a9c40b, type: 3}
 --- !u!4 &3521746366441934049 stripped
@@ -853,6 +865,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c6fc4864583cfae419cbe09f65671d42, type: 3}
       propertyPath: m_Name
       value: Kobold@Getting Hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6fc4864583cfae419cbe09f65671d42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6fc4864583cfae419cbe09f65671d42, type: 3}

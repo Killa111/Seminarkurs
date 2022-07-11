@@ -166,7 +166,7 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   visible: 0
-  m_AssetId: 3684022f94c26f247ac14f50490a246b
+  m_AssetId: 7091a1ecb97299045a608dede076f53d
   hasSpawned: 0
 --- !u!114 &5556872415232794387
 MonoBehaviour:
@@ -566,7 +566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bfb10e2662779f446bbbbd9a3aa8c7ba, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bfb10e2662779f446bbbbd9a3aa8c7ba, type: 3}
       propertyPath: m_LocalRotation.x
@@ -574,7 +574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bfb10e2662779f446bbbbd9a3aa8c7ba, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bfb10e2662779f446bbbbd9a3aa8c7ba, type: 3}
       propertyPath: m_LocalRotation.z
@@ -586,7 +586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bfb10e2662779f446bbbbd9a3aa8c7ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bfb10e2662779f446bbbbd9a3aa8c7ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -595,6 +595,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bfb10e2662779f446bbbbd9a3aa8c7ba, type: 3}
       propertyPath: m_Name
       value: Kobold with Hammer@Throw Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bfb10e2662779f446bbbbd9a3aa8c7ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfb10e2662779f446bbbbd9a3aa8c7ba, type: 3}
@@ -664,7 +668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 423d180abe159e34d91d3193af09f02a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 423d180abe159e34d91d3193af09f02a, type: 3}
       propertyPath: m_LocalRotation.x
@@ -672,7 +676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 423d180abe159e34d91d3193af09f02a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 423d180abe159e34d91d3193af09f02a, type: 3}
       propertyPath: m_LocalRotation.z
@@ -684,7 +688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 423d180abe159e34d91d3193af09f02a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 423d180abe159e34d91d3193af09f02a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -693,6 +697,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 423d180abe159e34d91d3193af09f02a, type: 3}
       propertyPath: m_Name
       value: Kobold with Hammer@Getting Hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 423d180abe159e34d91d3193af09f02a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 423d180abe159e34d91d3193af09f02a, type: 3}
@@ -762,7 +770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 726e79c2e0bb8694fadf4022b33d22dd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 726e79c2e0bb8694fadf4022b33d22dd, type: 3}
       propertyPath: m_LocalRotation.x
@@ -770,7 +778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 726e79c2e0bb8694fadf4022b33d22dd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 726e79c2e0bb8694fadf4022b33d22dd, type: 3}
       propertyPath: m_LocalRotation.z
@@ -782,7 +790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 726e79c2e0bb8694fadf4022b33d22dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 726e79c2e0bb8694fadf4022b33d22dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -791,6 +799,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 726e79c2e0bb8694fadf4022b33d22dd, type: 3}
       propertyPath: m_Name
       value: Kobold with Hammer
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 726e79c2e0bb8694fadf4022b33d22dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 726e79c2e0bb8694fadf4022b33d22dd, type: 3}
@@ -836,7 +848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 541a7126f06d6974aabda90bb2c2f634, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 541a7126f06d6974aabda90bb2c2f634, type: 3}
       propertyPath: m_LocalRotation.x
@@ -844,7 +856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 541a7126f06d6974aabda90bb2c2f634, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 541a7126f06d6974aabda90bb2c2f634, type: 3}
       propertyPath: m_LocalRotation.z
@@ -856,7 +868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 541a7126f06d6974aabda90bb2c2f634, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 541a7126f06d6974aabda90bb2c2f634, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -865,6 +877,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 541a7126f06d6974aabda90bb2c2f634, type: 3}
       propertyPath: m_Name
       value: Kobold with Hammer@Zombie Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 541a7126f06d6974aabda90bb2c2f634, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 541a7126f06d6974aabda90bb2c2f634, type: 3}
@@ -934,7 +950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a3f61aa0502c0f44082f2c832ac0f962, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a3f61aa0502c0f44082f2c832ac0f962, type: 3}
       propertyPath: m_LocalRotation.x
@@ -942,7 +958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a3f61aa0502c0f44082f2c832ac0f962, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a3f61aa0502c0f44082f2c832ac0f962, type: 3}
       propertyPath: m_LocalRotation.z
@@ -954,7 +970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a3f61aa0502c0f44082f2c832ac0f962, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a3f61aa0502c0f44082f2c832ac0f962, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -963,6 +979,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a3f61aa0502c0f44082f2c832ac0f962, type: 3}
       propertyPath: m_Name
       value: Kobold with Hammer@Walking
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a3f61aa0502c0f44082f2c832ac0f962, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3f61aa0502c0f44082f2c832ac0f962, type: 3}

@@ -358,7 +358,7 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   visible: 0
-  m_AssetId: 3684022f94c26f247ac14f50490a246b
+  m_AssetId: edababb01e0de5e4190a399beef415ab
   hasSpawned: 0
 --- !u!114 &270053297620214925
 MonoBehaviour:
@@ -481,6 +481,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 67a9bf5d42e18624db3cbb8abaa623a7, type: 3}
       propertyPath: m_Name
       value: Gnome@Getting Hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67a9bf5d42e18624db3cbb8abaa623a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67a9bf5d42e18624db3cbb8abaa623a7, type: 3}

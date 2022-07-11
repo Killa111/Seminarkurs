@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44576722, g: 0.49548155, b: 0.57428396, a: 1}
+  m_IndirectSpecularColor: {r: 0.4457674, g: 0.4954816, b: 0.57428396, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -375,6 +375,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &70572001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+  m_PrefabInstance: {fileID: 1800313678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &70572003
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70572001}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 523bcff6268118c4c8a699f499896667, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &74041472 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b158e95a50ea85e49b6733729fd381b7, type: 3}
@@ -509,6 +533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PilzMann blau@Wide Arm Spell Casting
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8df58b9eeb2823941a85711aa8adeae5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8df58b9eeb2823941a85711aa8adeae5, type: 3}
 --- !u!1 &85110286 stripped
@@ -602,6 +630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PilzMann@Getting Hit
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 651929ae11721e348ac981b106c59819, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 651929ae11721e348ac981b106c59819, type: 3}
 --- !u!1 &110160889 stripped
@@ -694,6 +726,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 726e79c2e0bb8694fadf4022b33d22dd, type: 3}
       propertyPath: m_Name
       value: Kobold with Hammer
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 726e79c2e0bb8694fadf4022b33d22dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 726e79c2e0bb8694fadf4022b33d22dd, type: 3}
@@ -1079,7 +1115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 17ebf3413e4e433448f419cc5a073484, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17ebf3413e4e433448f419cc5a073484, type: 3}
@@ -1707,7 +1743,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8770034f333cf214195940085bbe4b78, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8770034f333cf214195940085bbe4b78, type: 3}
       propertyPath: m_LocalScale.x
@@ -1764,6 +1800,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8770034f333cf214195940085bbe4b78, type: 3}
       propertyPath: m_Name
       value: PilzMann blau@Getting Hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8770034f333cf214195940085bbe4b78, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8770034f333cf214195940085bbe4b78, type: 3}
@@ -1930,6 +1970,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 063d603d42d0722428c6fd25afe04f7b, type: 3}
       propertyPath: m_Name
       value: PilzMann@Old Man Walk(1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 063d603d42d0722428c6fd25afe04f7b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 063d603d42d0722428c6fd25afe04f7b, type: 3}
@@ -2234,6 +2278,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2c8abc610495f0846b8996c9c9f35531, type: 3}
       propertyPath: m_Name
       value: PilzMann@Old Man Idle(1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c8abc610495f0846b8996c9c9f35531, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c8abc610495f0846b8996c9c9f35531, type: 3}
@@ -2680,6 +2728,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kobold@Getting Hit
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6fc4864583cfae419cbe09f65671d42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6fc4864583cfae419cbe09f65671d42, type: 3}
 --- !u!1 &670927463 stripped
@@ -2777,6 +2829,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: af0af08dd73baff45ae4674669a670e1, type: 3}
       propertyPath: m_Name
       value: Alb blau
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: af0af08dd73baff45ae4674669a670e1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af0af08dd73baff45ae4674669a670e1, type: 3}
@@ -3036,6 +3092,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d6e868057da97584b92ca86929535ef1, type: 3}
       propertyPath: m_Name
       value: Alb (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d6e868057da97584b92ca86929535ef1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e868057da97584b92ca86929535ef1, type: 3}
@@ -3447,6 +3507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gnome@Getting Hit
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67a9bf5d42e18624db3cbb8abaa623a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67a9bf5d42e18624db3cbb8abaa623a7, type: 3}
 --- !u!1 &943472799 stripped
@@ -3539,6 +3603,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a3f61aa0502c0f44082f2c832ac0f962, type: 3}
       propertyPath: m_Name
       value: Kobold with Hammer@Walking
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a3f61aa0502c0f44082f2c832ac0f962, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3f61aa0502c0f44082f2c832ac0f962, type: 3}
@@ -4002,11 +4070,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7784879016453318068, guid: 48d1a7c047308064a91ceb208976aa7b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1680
+      value: 433
       objectReference: {fileID: 0}
     - target: {fileID: 7784879016453318068, guid: 48d1a7c047308064a91ceb208976aa7b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 497
+      value: -166
       objectReference: {fileID: 0}
     - target: {fileID: 7784879016453318068, guid: 48d1a7c047308064a91ceb208976aa7b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4329,11 +4397,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5754393229630718080, guid: 2c456c5aca3134341a88461f668f684c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1680
+      value: 433
       objectReference: {fileID: 0}
     - target: {fileID: 5754393229630718080, guid: 2c456c5aca3134341a88461f668f684c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 850
+      value: 187
       objectReference: {fileID: 0}
     - target: {fileID: 5754393229630718080, guid: 2c456c5aca3134341a88461f668f684c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4606,99 +4674,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 900961834310459133, guid: 4197d83d527e2694db5f5d876a93e4dc, type: 3}
   m_PrefabInstance: {fileID: 1126732778}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1141171961
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2104634298}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.23
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.23
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.23
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.93
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-      propertyPath: m_Name
-      value: PilzMann blau@Old Man Idle
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
---- !u!1 &1141171962 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
-  m_PrefabInstance: {fileID: 1141171961}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1141171963
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141171962}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ef3ab08e813a6e84c9abd41a702b8c7e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1163793924
 GameObject:
   m_ObjectHideFlags: 0
@@ -5069,6 +5044,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kobold@Dwarf Walk (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6f15585ed7b8ae4084adf7bc1a9c40b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f15585ed7b8ae4084adf7bc1a9c40b, type: 3}
 --- !u!1 &1268338139 stripped
@@ -5161,6 +5140,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e921990801ed2ee4d8c7773959a34ab4, type: 3}
       propertyPath: m_Name
       value: PilzMann@Magic Spell Casting(1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e921990801ed2ee4d8c7773959a34ab4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e921990801ed2ee4d8c7773959a34ab4, type: 3}
@@ -5264,6 +5247,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 781eae0b35dfbd540a0c3094c1a9f096, type: 3}
       propertyPath: m_Name
       value: Kobold@Punching
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 781eae0b35dfbd540a0c3094c1a9f096, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 781eae0b35dfbd540a0c3094c1a9f096, type: 3}
@@ -5517,6 +5504,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bfb10e2662779f446bbbbd9a3aa8c7ba, type: 3}
       propertyPath: m_Name
       value: Kobold with Hammer@Throw Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bfb10e2662779f446bbbbd9a3aa8c7ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfb10e2662779f446bbbbd9a3aa8c7ba, type: 3}
@@ -5881,6 +5872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kobold with Hammer@Getting Hit
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 423d180abe159e34d91d3193af09f02a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 423d180abe159e34d91d3193af09f02a, type: 3}
 --- !u!1 &1541033524 stripped
@@ -5973,6 +5968,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d46cb8780ecd74290f79677aa1b614, type: 3}
       propertyPath: m_Name
       value: PilzMann@Old Man Walk
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d46cb8780ecd74290f79677aa1b614, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d46cb8780ecd74290f79677aa1b614, type: 3}
@@ -6523,6 +6522,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 900961834310459133, guid: 4197d83d527e2694db5f5d876a93e4dc, type: 3}
   m_PrefabInstance: {fileID: 1753877707}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1800313678
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2104634298}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
+      propertyPath: m_Name
+      value: PilzMann blau@Old Man Idle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6a1327b1b4c63a848ae3c8e62164da6e, type: 3}
 --- !u!1001 &1826155594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7790,7 +7858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd8d90758f4427408c667015c6e88f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleAnimation: {fileID: 1141171962}
+  idleAnimation: {fileID: 70572001}
   walkAnimation: {fileID: 1571847168}
   attackAnimation: {fileID: 85110286}
   hitAnimation: {fileID: 399234535}
