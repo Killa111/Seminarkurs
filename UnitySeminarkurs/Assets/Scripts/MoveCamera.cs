@@ -12,15 +12,13 @@ public class MoveCamera : MonoBehaviour
     public float rotation;
     public Vector3 zoom;
     public Transform cameraTransform;
-    public GameObject camControler;
 
     public Vector3 neuePosition;
     public Quaternion neueRotation;
     public Vector3 neuerZoom;
 
-    private int sideSwitched = 1;        // gets multiplicatet with all canges, if 1 normal,
-                                         // if side changed -1 to invert the canges
 
+    public Vector3 startZoom;
     private Vector3 side0posCam = new Vector3(20.4f, 18f, 0.05f);
     private Quaternion side0rotateCam = Quaternion.Euler(0f, 0f, 0f);
     private Vector3 side1posCam = new Vector3(32f, 18f, 125f);
@@ -28,21 +26,25 @@ public class MoveCamera : MonoBehaviour
 
     public void changeToSide0()
     {
-        sideSwitched = 1;
-        camControler.transform.position = side0posCam;
-        camControler.transform.rotation = side0rotateCam;
+        Debug.Log("cam changed to side 0");
+        neuePosition = side0posCam;
+        neueRotation = side0rotateCam;
+        neuerZoom = startZoom;
     }
 
     public void changeToSide1()
     {
-        sideSwitched = -1;
-        camControler.transform.position = side1posCam;
-        camControler.transform.rotation = side1rotateCam;
+        Debug.Log("cam changed to side 1");
+        neuePosition = side1posCam;
+        neueRotation = side1rotateCam;
+        neuerZoom = startZoom;
     }
 
 
     void Start()
     {
+        startZoom = cameraTransform.localPosition;
+
         neuePosition = transform.position;
         neueRotation = transform.rotation;
         neuerZoom = cameraTransform.localPosition;
@@ -69,52 +71,53 @@ public class MoveCamera : MonoBehaviour
     
         if( Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))          //Vorwärts bewegen
         {
-            neuePosition += (transform.forward * geschwindigkeit * sideSwitched);
+            neuePosition += (transform.forward * geschwindigkeit);
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))       //Rückwärts bewegen
         {
-            neuePosition += (transform.forward * -geschwindigkeit * sideSwitched);
+            neuePosition += (transform.forward * -geschwindigkeit );
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))      //nach rechts bewegen
         {
-            neuePosition += (transform.right * geschwindigkeit * sideSwitched);
+            neuePosition += (transform.right * geschwindigkeit);
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))      //nach links bewegen
         {
-            neuePosition += (transform.right * -geschwindigkeit * sideSwitched);
+            neuePosition += (transform.right * -geschwindigkeit);
         }
 
         if (Input.GetKey(KeyCode.Q))                                        //Kamera nach links rotieren
         {
-            neueRotation *= Quaternion.Euler(Vector3.up * rotation * sideSwitched);
+            neueRotation *= Quaternion.Euler(Vector3.up * rotation );
         }
         if (Input.GetKey(KeyCode.E))                                        //Kamera nach rechts rotieren
         {
-            neueRotation *= Quaternion.Euler(Vector3.up * -rotation * sideSwitched);       
+            neueRotation *= Quaternion.Euler(Vector3.up * -rotation);       
         }
 
 
         if (Input.GetKey(KeyCode.R))                                        //hin zoomen
         {
-            neuerZoom += zoom * sideSwitched;
+            neuerZoom += zoom;
         }
         if (Input.GetKey(KeyCode.F))                                        //weg zoomen
         {
-            neuerZoom += -zoom * sideSwitched;
+            neuerZoom += -zoom;
         }
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)                                        //hin zoomen
         {
-            neuerZoom += zoom* 3 * sideSwitched;
+            neuerZoom += zoom* 3;
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0f)                                        //weg zoomen
         {
-            neuerZoom += -zoom*3 * sideSwitched;
+            neuerZoom += -zoom*3;
         }
 
-
+        
         cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, neuerZoom, Time.deltaTime * zeit); //Bewegungen flüssiger ablaufen lassen
         transform.position = Vector3.Lerp(transform.position, neuePosition, Time.deltaTime * zeit);
         transform.rotation = Quaternion.Lerp(transform.rotation, neueRotation, Time.deltaTime * zeit);
+        
     }
 }
