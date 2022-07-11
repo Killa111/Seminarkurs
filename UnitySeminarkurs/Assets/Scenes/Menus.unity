@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -657,6 +657,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heldenwahlpannel2
       objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 382240516}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: buttonRightHero2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HeldenWahl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3730949562086381895, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
       propertyPath: m_Name
       value: Title2
@@ -664,6 +692,34 @@ PrefabInstance:
     - target: {fileID: 4053889216008125238, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
       propertyPath: m_Name
       value: TextTitle2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 382240516}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: buttonLeftHero2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HeldenWahl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
@@ -2227,18 +2283,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f18ab32d0c00d24180b5e2d0b04e2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 1743211070}
   namesHeroes:
-  - 0
-  - 1
-  - 2
-  healthHeroes: 0a000000140000001e000000
-  damageHeroes: 0a000000140000001e000000
-  walkingRangeHeroes: 0a000000140000001e000000
-  attackingRangeHeroes: 0a000000140000001e000000
+  - 01
+  - 02
+  - 03
+  - 04
+  - 05
+  - 06
+  healthHeroes: 0a000000140000001e00000028000000320000003c000000
+  damageHeroes: 0a000000140000001e00000028000000320000003c000000
+  walkingRangeHeroes: 0a000000140000001e00000028000000320000003c000000
+  attackingRangeHeroes: 0a000000140000001e00000028000000320000003c000000
   descriptionHeroes:
   - aa
   - bb
   - cc
+  - dd
+  - ee
+  - ff
+  title: {fileID: 661488922}
   nameHero0Text: {fileID: 2128662041}
   nameHero1Text: {fileID: 147744464}
   nameHero2Text: {fileID: 957388022}
@@ -4035,6 +4099,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3706850532736549852, guid: fd4c1820cc3d3354c868de44bb18ca78, type: 3}
   m_PrefabInstance: {fileID: 656266615}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &661488922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5595201206096009466, guid: 19226d2004a63e043aff5a479c145f2f, type: 3}
+  m_PrefabInstance: {fileID: 2071346222}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &683598008
 GameObject:
   m_ObjectHideFlags: 0
@@ -5181,18 +5256,18 @@ PrefabInstance:
     - target: {fileID: 5754393229630718083, guid: 2c456c5aca3134341a88461f668f684c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1743211070}
+      objectReference: {fileID: 382240516}
     - target: {fileID: 5754393229630718083, guid: 2c456c5aca3134341a88461f668f684c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5754393229630718083, guid: 2c456c5aca3134341a88461f668f684c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: activateGame
+      value: confirmHeroesChoosen
       objectReference: {fileID: 0}
     - target: {fileID: 5754393229630718083, guid: 2c456c5aca3134341a88461f668f684c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Menu, Assembly-CSharp
+      value: HeldenWahl, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5754393229630718083, guid: 2c456c5aca3134341a88461f668f684c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -7643,8 +7718,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1495582769}
   m_HandleRect: {fileID: 1495582768}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.800504
+  m_Value: 0.9999998
+  m_Size: 0.80050397
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9095,6 +9170,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heldenwahlpannel1
       objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 382240516}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: buttonRightHero1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HeldenWahl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3730949562086381895, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
       propertyPath: m_Name
       value: Title1
@@ -9102,6 +9205,34 @@ PrefabInstance:
     - target: {fileID: 4053889216008125238, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
       propertyPath: m_Name
       value: TextTitle1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 382240516}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: buttonLeftHero1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HeldenWahl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
@@ -9493,6 +9624,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee8bb4131cee3d4087db2f6e266ed1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  names0Heroes:
+  - 
+  - 
+  - 
+  number0Heroes: 000000000000000000000000
+  health0Heroes: 000000000000000000000000
+  damage0Heroes: 000000000000000000000000
+  walkingRange0Heroes: 000000000000000000000000
+  attackingRange0Heroes: 000000000000000000000000
+  names1Heroes:
+  - 
+  - 
+  - 
+  number1Heroes: 000000000000000000000000
+  health1Heroes: 000000000000000000000000
+  damage1Heroes: 000000000000000000000000
+  walkingRange1Heroes: 000000000000000000000000
+  attackingRange1Heroes: 000000000000000000000000
 --- !u!1001 &1562142521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10741,7 +10890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4868990997117075706, guid: 74bef779621faf5448ab6cdfb0455938, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -479.99997
+      value: -479.99988
       objectReference: {fileID: 0}
     - target: {fileID: 4868990997117075706, guid: 74bef779621faf5448ab6cdfb0455938, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -12180,6 +12329,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 382240513}
     m_Modifications:
+    - target: {fileID: 2824728517913908492, guid: 19226d2004a63e043aff5a479c145f2f, type: 3}
+      propertyPath: m_Name
+      value: HeldenWahlTitle
+      objectReference: {fileID: 0}
     - target: {fileID: 4606503235527024230, guid: 19226d2004a63e043aff5a479c145f2f, type: 3}
       propertyPath: m_Name
       value: Title
@@ -13458,6 +13611,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heldenwahlpannel0
       objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 382240516}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: buttonRightHero0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HeldenWahl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090612518946842967, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3730949562086381895, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
       propertyPath: m_Name
       value: Title0
@@ -13477,6 +13658,34 @@ PrefabInstance:
     - target: {fileID: 5370271983060944345, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
       propertyPath: m_Color.r
       value: 0.87843144
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 382240516}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: buttonLeftHero0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HeldenWahl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652668731982330057, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce61edbcbf9339e4ca6893dbee21895f, type: 3}

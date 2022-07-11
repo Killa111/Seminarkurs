@@ -5,6 +5,10 @@ using TMPro;
 
 public class HeldenWahl : MonoBehaviour
 {
+    public Menu menu;
+
+    private bool player0Orplayer1HeldenWahl;       // saves if player0 (false) or player1 (true) currently chooses
+
     public string[] namesHeroes;
 
     public int[] healthHeroes;
@@ -17,18 +21,19 @@ public class HeldenWahl : MonoBehaviour
 
     public string[] descriptionHeroes;
 
+    private string[] names0Heroes = new string[3];
+    private int[] health0Heroes = new int[3];
+    private int[] damage0Heroes = new int[3];
+    private int[] walkingRange0Heroes = new int[3];
+    private int[] attackingRange0Heroes = new int[3];
 
-    public static string[] names0Heroes = new string[3];
-    public static int[] health0Heroes = new int[3];
-    public static int[] damage0Heroes = new int[3];
-    public static int[] walkingRange0Heroes = new int[3];  
-    public static int[] attackingRange0Heroes = new int[3];
+    private string[] names1Heroes = new string[3];
+    private int[] health1Heroes = new int[3];
+    private int[] damage1Heroes = new int[3];
+    private int[] walkingRange1Heroes = new int[3];
+    private int[] attackingRange1Heroes = new int[3];
 
-    public static string[] names1Heroes = new string[3];
-    public static int[] health1Heroes = new int[3];
-    public static int[] damage1Heroes = new int[3];
-    public static int[] walkingRange1Heroes = new int[3];
-    public static int[] attackingRange1Heroes = new int[3];
+    public TMP_Text title;
 
     public TMP_Text nameHero0Text;
 
@@ -51,31 +56,37 @@ public class HeldenWahl : MonoBehaviour
     public void buttonLeftHero0()
     {
         hero0Number = heroLeft(hero0Number);
+        textUpdate();
     }
 
     public void buttonRightHero0()
     {
         hero0Number = heroRight(hero0Number);
+        textUpdate();
     }
 
     public void buttonLeftHero1()
     {
         hero1Number = heroLeft(hero1Number);
+        textUpdate();
     }
 
     public void buttonRightHero1()
     {
         hero1Number = heroRight(hero1Number);
+        textUpdate();
     }
 
     public void buttonLeftHero2()
     {
         hero2Number = heroLeft(hero2Number);
+        textUpdate();
     }
 
     public void buttonRightHero2()
     {
         hero2Number = heroRight(hero2Number);
+        textUpdate();
     }
 
 
@@ -112,7 +123,7 @@ public class HeldenWahl : MonoBehaviour
 
         currentHeroNumber--;
 
-        if (currentHeroNumber >= namesHeroes.Length)
+        if (currentHeroNumber < 0)
         {
             return currentHeroNumberStart;
         }
@@ -123,7 +134,7 @@ public class HeldenWahl : MonoBehaviour
         {
             currentHeroNumber--;
 
-            if (currentHeroNumber >= namesHeroes.Length)
+            if (currentHeroNumber < 0)
             {
                 return currentHeroNumberStart;
             }
@@ -135,16 +146,30 @@ public class HeldenWahl : MonoBehaviour
 
     private void textUpdate()
     {
+        if (player0Orplayer1HeldenWahl)
+        {
+            title.text = "Choose  Player 1";
+        }
+        else
+        {
+            title.text = "Choose  Player 0";
+        }
+
         nameHero0Text.text = namesHeroes[hero0Number];
         nameHero1Text.text = namesHeroes[hero1Number];
         nameHero2Text.text = namesHeroes[hero2Number];
 
         descriptionHero0Text.text = "Health: " + healthHeroes[hero0Number] + '\n' + "Damage: " + damageHeroes[hero0Number] + '\n'+
-            "Walking range: " + walkingRangeHeroes[hero0Number] + '\n'+ "Attack range: "+ attackingRangeHeroes[hero0Number];
+            "Walking range: " + walkingRangeHeroes[hero0Number] + '\n'+ "Attack range: "+ attackingRangeHeroes[hero0Number] + '\n'+
+            descriptionHeroes[hero0Number] + "  " + hero0Number;
+
         descriptionHero1Text.text = "Health: " + healthHeroes[hero1Number] + '\n' + "Damage: " + damageHeroes[hero1Number] + '\n' +
-            "Walking range: " + walkingRangeHeroes[hero1Number] + '\n' + "Attack range: " + attackingRangeHeroes[hero1Number];
+            "Walking range: " + walkingRangeHeroes[hero1Number] + '\n' + "Attack range: " + attackingRangeHeroes[hero1Number] + '\n' +
+            descriptionHeroes[hero1Number] + "  " + hero1Number;
+
         descriptionHero2Text.text = "Health: " + healthHeroes[hero2Number] + '\n' + "Damage: " + damageHeroes[hero2Number] + '\n' +
-            "Walking range: " + walkingRangeHeroes[hero2Number] + '\n' + "Attack range: " + attackingRangeHeroes[hero2Number];
+            "Walking range: " + walkingRangeHeroes[hero2Number] + '\n' + "Attack range: " + attackingRangeHeroes[hero2Number] + '\n' +
+            descriptionHeroes[hero2Number] + "  " + hero2Number;
     }
 
     public void resetHeroes()
@@ -175,6 +200,16 @@ public class HeldenWahl : MonoBehaviour
         attackingRange0Heroes[0] = attackingRangeHeroes[hero0Number];
         attackingRange0Heroes[1] = attackingRangeHeroes[hero1Number];
         attackingRange0Heroes[2] = attackingRangeHeroes[hero2Number];
+
+        VariablesAcrossScenes.instance.names0Heroes = names0Heroes;
+        VariablesAcrossScenes.instance.health0Heroes = health0Heroes;
+        VariablesAcrossScenes.instance.damage0Heroes = damage0Heroes;
+        VariablesAcrossScenes.instance.walkingRange0Heroes = walkingRange0Heroes;
+        VariablesAcrossScenes.instance.attackingRange0Heroes = attackingRange0Heroes;
+
+        VariablesAcrossScenes.instance.number0Heroes[0] = hero0Number;
+        VariablesAcrossScenes.instance.number0Heroes[1] = hero1Number;
+        VariablesAcrossScenes.instance.number0Heroes[2] = hero2Number;
     }
 
     public void setStats1Heroes()
@@ -198,6 +233,16 @@ public class HeldenWahl : MonoBehaviour
         attackingRange1Heroes[0] = attackingRangeHeroes[hero0Number];
         attackingRange1Heroes[1] = attackingRangeHeroes[hero1Number];
         attackingRange1Heroes[2] = attackingRangeHeroes[hero2Number];
+
+        VariablesAcrossScenes.instance.names1Heroes = names1Heroes;
+        VariablesAcrossScenes.instance.health1Heroes = health1Heroes;
+        VariablesAcrossScenes.instance.damage1Heroes = damage1Heroes;
+        VariablesAcrossScenes.instance.walkingRange1Heroes = walkingRange1Heroes;
+        VariablesAcrossScenes.instance.attackingRange1Heroes = attackingRange1Heroes;
+
+        VariablesAcrossScenes.instance.number1Heroes[0] = hero0Number;
+        VariablesAcrossScenes.instance.number1Heroes[1] = hero1Number;
+        VariablesAcrossScenes.instance.number1Heroes[2] = hero2Number;
     }
 
     // Start is called before the first frame update
@@ -206,9 +251,28 @@ public class HeldenWahl : MonoBehaviour
         textUpdate();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void setPlayer0HeldenWahl()
     {
+        player0Orplayer1HeldenWahl = false;
+    }
+
+    public void confirmHeroesChoosen()
+    {
+        if (!player0Orplayer1HeldenWahl)
+        {
+            setStats0Heroes();
+            resetHeroes();
+
+            player0Orplayer1HeldenWahl = true;
+            textUpdate();
+        }
+        else
+        {
+            setStats1Heroes();
+            resetHeroes();
+
+            menu.activateGame();
+        }
         
     }
 }

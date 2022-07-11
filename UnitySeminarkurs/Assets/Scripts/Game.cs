@@ -6,12 +6,9 @@ public class Game : MonoBehaviour
 {
     public bool isOnline = false;
 
-    private void Awake()
+    private void Start()
     {
-        /*
-         get variable isOnline
-        
-         */
+
     }
 
     public GameObject goConfirmButton;
