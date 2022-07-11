@@ -12,7 +12,7 @@ public class MoveCamera : MonoBehaviour
     public float rotation;
     public Vector3 zoom;
     public Transform cameraTransform;
-
+    public GameObject camControler;
 
     public Vector3 neuePosition;
     public Quaternion neueRotation;
@@ -21,23 +21,23 @@ public class MoveCamera : MonoBehaviour
     private int sideSwitched = 1;        // gets multiplicatet with all canges, if 1 normal,
                                          // if side changed -1 to invert the canges
 
-    private Vector3 side0posCam = new Vector3(5.6f, 18.5f, -27f);
-    private Quaternion side0rotateCam = Quaternion.Euler(60f, 0f, 0f);
-    private Vector3 side1posCam = new Vector3(5.6f, 18.5f, 127f);
-    private Quaternion side1rotateCam = Quaternion.Euler(60f, 180f, 0f);
+    private Vector3 side0posCam = new Vector3(20.4f, 18f, 0.05f);
+    private Quaternion side0rotateCam = Quaternion.Euler(0f, 0f, 0f);
+    private Vector3 side1posCam = new Vector3(32f, 18f, 125f);
+    private Quaternion side1rotateCam = Quaternion.Euler(0f, 180f, 0f);
 
     public void changeToSide0()
     {
         sideSwitched = 1;
-        transform.position = side0posCam;
-        transform.transform.rotation = side0rotateCam;
+        camControler.transform.position = side0posCam;
+        camControler.transform.rotation = side0rotateCam;
     }
 
     public void changeToSide1()
     {
         sideSwitched = -1;
-        transform.position = side1posCam;
-        transform.transform.rotation = side1rotateCam;
+        camControler.transform.position = side1posCam;
+        camControler.transform.rotation = side1rotateCam;
     }
 
 
