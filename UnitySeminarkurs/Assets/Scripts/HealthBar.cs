@@ -8,8 +8,8 @@ public class HealthBar : MonoBehaviour
     private Stats stats;
     public GameObject playerName;
 
-    public int health;
-    public int currentHealth;
+    private int health;
+    private int currentHealth;
 
     public Slider healthSlider;
 

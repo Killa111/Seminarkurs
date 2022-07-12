@@ -15,8 +15,6 @@ public class MousPlayerMovement : MonoBehaviour
 
     public NavMeshAgent meshAgent;
 
-    private bool hitHero = false;
-
     public string nameMoveRange;
 
     public bool moved = false;
@@ -73,6 +71,8 @@ public class MousPlayerMovement : MonoBehaviour
                 } 
             }
 
+            bool hitHero = false;
+
             if (foundField == true)
             {
                 Vector3 biggerHeight = new Vector3(0, 100, 0);   // lets the ray start from a bigger height
@@ -86,7 +86,12 @@ public class MousPlayerMovement : MonoBehaviour
                 {
                     if (hits2[i].transform.tag == "Hero")                    // if a Hero got hit, a Hero stands on the field already
                     {
-                        hitHero = true;
+                        if (hits2[i].transform.name != gameObject.transform.name)   // checks if the Hero didn't hit itself
+                                                                                    // if the hero hit it selve it will skip 
+                                                                                    // the movement this round
+                        {
+                            hitHero = true;
+                        }                        
                     }
                 }
             }

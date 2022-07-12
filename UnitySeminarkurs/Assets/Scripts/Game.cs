@@ -192,6 +192,36 @@ public class Game : MonoBehaviour
         // reset progress
         heroChoosen = false;
         progressRound = 0;
+
+        // deactivate Movement/Attack
+
+        goAttackRange0Hero0.SetActive(false);
+        goAttackRange0Hero1.SetActive(false);
+        goAttackRange0Hero2.SetActive(false);
+        goAttackRange1Hero0.SetActive(false);
+        goAttackRange1Hero1.SetActive(false);
+        goAttackRange1Hero2.SetActive(false);
+
+        goMovementRange0Hero0.SetActive(false);
+        goMovementRange0Hero1.SetActive(false);
+        goMovementRange0Hero2.SetActive(false);
+        goMovementRange1Hero0.SetActive(false);
+        goMovementRange1Hero1.SetActive(false);
+        goMovementRange1Hero2.SetActive(false);
+
+        go0Hero0.GetComponent<MousPlayerAttack>().enabled = false;
+        go0Hero1.GetComponent<MousPlayerAttack>().enabled = false;
+        go0Hero2.GetComponent<MousPlayerAttack>().enabled = false;
+        go1Hero0.GetComponent<MousPlayerAttack>().enabled = false;
+        go1Hero1.GetComponent<MousPlayerAttack>().enabled = false;
+        go1Hero2.GetComponent<MousPlayerAttack>().enabled = false;
+
+        go0Hero0.GetComponent<MousPlayerMovement>().enabled = false;
+        go0Hero1.GetComponent<MousPlayerMovement>().enabled = false;
+        go0Hero2.GetComponent<MousPlayerMovement>().enabled = false;
+        go1Hero0.GetComponent<MousPlayerMovement>().enabled = false;
+        go1Hero1.GetComponent<MousPlayerMovement>().enabled = false;
+        go1Hero2.GetComponent<MousPlayerMovement>().enabled = false;
     }
 
     public void beginnWalkingAnimation()
