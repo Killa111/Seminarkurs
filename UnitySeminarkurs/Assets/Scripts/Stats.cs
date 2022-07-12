@@ -13,6 +13,8 @@ public class Stats : MonoBehaviour
     private int movementRange;
     private int attackRange;
     private int currentHealth;
+
+    public GameObject[] figurines;
    
     private void Start() 
     {
@@ -39,6 +41,13 @@ public class Stats : MonoBehaviour
     
 
         currentHealth = health;
+
+        for (int i = 0; i < figurines.Length; i++)
+        {
+            figurines[i].SetActive(false);
+        }
+
+        figurines[numberHero].SetActive(true);
     }
     
     public void setHealth( int newHealth)

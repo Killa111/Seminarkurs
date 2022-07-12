@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1216,7 +1216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &212014566
 Light:
   m_ObjectHideFlags: 0
@@ -1229,7 +1229,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1271,7 +1271,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -2285,12 +2285,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 1743211070}
   namesHeroes:
-  - 01
-  - 02
-  - 03
-  - 04
-  - 05
-  - 06
+  - Gnome
+  - Golem
+  - Koblod
+  - KoboldMitHammer
+  - PilzMannBlau
+  - PilzMann
   healthHeroes: 0a000000140000001e00000028000000320000003c000000
   damageHeroes: 0a000000140000001e00000028000000320000003c000000
   walkingRangeHeroes: 0a000000140000001e00000028000000320000003c000000
@@ -4643,7 +4643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: 0}
+  m_AnchoredPosition: {x: 0.00024414062, y: 0}
   m_SizeDelta: {x: 172.54, y: 97.021}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &813851900
@@ -7719,7 +7719,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1495582768}
   m_Direction: 2
   m_Value: 1.0000002
-  m_Size: 0.8005041
+  m_Size: 0.80050415
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10890,7 +10890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4868990997117075706, guid: 74bef779621faf5448ab6cdfb0455938, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -479.99988
+      value: -479.9999
       objectReference: {fileID: 0}
     - target: {fileID: 4868990997117075706, guid: 74bef779621faf5448ab6cdfb0455938, type: 3}
       propertyPath: m_AnchoredPosition.y

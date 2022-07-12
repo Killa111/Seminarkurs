@@ -259,10 +259,8 @@ public class Menu : MonoBehaviour
         switch (cosenLevel)
         {
             case 0:
-                SceneManager.LoadScene("Level1", LoadSceneMode.Additive);
+                SceneManager.LoadScene("Level1");
             break;
-
-
         }
 
         

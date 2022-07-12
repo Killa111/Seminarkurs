@@ -1,6 +1,6 @@
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -70,9 +70,14 @@ public class Game : MonoBehaviour
 
     int progressRound = 0;          // stores which progress is made in this round
 
-    private void endGame()
+    public void endGame()
     {
+        SceneManager.LoadScene("Menus");
+    }
 
+    public void reloadGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
     private void side0Won()
@@ -99,13 +104,11 @@ public class Game : MonoBehaviour
         if (dead0Heroes[0] && dead0Heroes[1] && dead0Heroes[2])    // check if all Heros of side0 are beaten
         {
             side1Won();
-            endGame();
         }
 
         if (dead1Heroes[0] && dead1Heroes[1] && dead1Heroes[2])    // check if all Heros of side1 are beaten
         {
             side0Won();
-            endGame();
         }
     }
 

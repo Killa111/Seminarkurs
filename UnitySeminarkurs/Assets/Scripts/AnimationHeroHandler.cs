@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class AnimationHeroHandler : MonoBehaviour
 {
-    public GameObject idleAnimation;
-    public GameObject walkAnimation;
-    public GameObject attackAnimation;
-    public GameObject hitAnimation;
+    public GameObject[] idleAnimation;
+    public GameObject[] walkAnimation;
+    public GameObject[] attackAnimation;
+    public GameObject[] hitAnimation;
 
     // Start is called before the first frame update
     void Start()
@@ -16,44 +16,49 @@ public class AnimationHeroHandler : MonoBehaviour
     }
 
 
-    public void walk()      //alles ausauﬂer laufen.
+    public void walk()      //alles auﬂer laufen.
     {
-        walkAnimation.SetActive(true);
-        attackAnimation.SetActive(false);
-        idleAnimation.SetActive(false);
-        hitAnimation.SetActive(false);
-
+        for (int i = 0; i < idleAnimation.Length; i++)
+        {
+            walkAnimation[i].SetActive(true);
+            attackAnimation[i].SetActive(false);
+            idleAnimation[i].SetActive(false);
+            hitAnimation[i].SetActive(false);
+        }
     }
 
     public void attack()            //alles aus auﬂer Angriff
     {
-        walkAnimation.SetActive(false);
-        attackAnimation.SetActive(true);
-        idleAnimation.SetActive(false);
-
+        for(int i = 0; i < idleAnimation.Length; i++)
+        {
+            walkAnimation[i].SetActive(false);
+            attackAnimation[i].SetActive(true);
+            idleAnimation[i].SetActive(false);
+        }
     }
 
 
     public void inactive()          //alles aus, auﬂer idle
     {
-        walkAnimation.SetActive(false);
-        attackAnimation.SetActive(false);
-        idleAnimation.SetActive(true);
-        hitAnimation.SetActive(false);
+        for (int i = 0; i < idleAnimation.Length; i++)
+        {
+            walkAnimation[i].SetActive(false);
+            attackAnimation[i].SetActive(false);
+            idleAnimation[i].SetActive(true);
+            hitAnimation[i].SetActive(false);
+        }
     }
 
     public void hitted()                //alles aus, auﬂer getroffen
     {
-        walkAnimation.SetActive(false);
-        attackAnimation.SetActive(false);
-        idleAnimation.SetActive(false);
-        hitAnimation.SetActive(true);
+        for (int i = 0; i < idleAnimation.Length; i++)
+        {
+            walkAnimation[i].SetActive(false);
+            attackAnimation[i].SetActive(false);
+            idleAnimation[i].SetActive(false);
+            hitAnimation[i].SetActive(true);
+        }
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
