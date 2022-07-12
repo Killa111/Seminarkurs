@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5412,6 +5412,36 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3706850532736549852, guid: fd4c1820cc3d3354c868de44bb18ca78, type: 3}
   m_PrefabInstance: {fileID: 656266615}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &658597667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 658597668}
+  m_Layer: 0
+  m_Name: StartLobby
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &658597668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658597667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -38.683285, y: -51.2613, z: 165.00201}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &661488922 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5595201206096009466, guid: 19226d2004a63e043aff5a479c145f2f, type: 3}
@@ -9889,8 +9919,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1495582769}
   m_HandleRect: {fileID: 1495582768}
   m_Direction: 2
-  m_Value: 0.9999998
-  m_Size: 0.80050397
+  m_Value: 1
+  m_Size: 0.8005041
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13973,7 +14003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4868990997117075706, guid: 74bef779621faf5448ab6cdfb0455938, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -479.99985
+      value: -479.99988
       objectReference: {fileID: 0}
     - target: {fileID: 4868990997117075706, guid: 74bef779621faf5448ab6cdfb0455938, type: 3}
       propertyPath: m_AnchoredPosition.y
