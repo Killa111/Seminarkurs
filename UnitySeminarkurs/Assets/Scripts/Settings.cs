@@ -55,7 +55,7 @@ public class Settings : MonoBehaviour
     private void Start()
     {
         ColorUtility.TryParseHtmlString("D6D6D6", out standardColor);
-        ColorUtility.TryParseHtmlString("969696", out activatetColor);
+        ColorUtility.TryParseHtmlString("E7E7E7", out activatetColor);
 
         activateAudioSettings();
     }
