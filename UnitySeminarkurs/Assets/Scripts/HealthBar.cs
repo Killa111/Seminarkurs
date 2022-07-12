@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour
 
     public Slider healthSlider;
 
-    private bool fistTime;
+    private bool fistTime = true;
 
     void Awake() // gets called before Start
     {
@@ -26,6 +26,7 @@ public class HealthBar : MonoBehaviour
         if (fistTime)
         {
             health = stats.getHealth();
+            fistTime = false;
         }
 
         currentHealth = stats.getCurrentHealth();
