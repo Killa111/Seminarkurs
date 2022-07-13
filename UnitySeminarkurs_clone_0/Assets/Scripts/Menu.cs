@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+
     public int cosenLevel;
 
     public GameObject StartMenu;
@@ -121,6 +122,9 @@ public class Menu : MonoBehaviour
         CloseAll();
 
         HeldenWahl.SetActive(true);
+
+        HeldenWahl.GetComponent<HeldenWahl>().setPlayer0HeldenWahl();   // states that the HeldenWahl was opened
+                                                                        // and now player0 chooses
     }
 
     public void returnFromHeldenWahl()          
@@ -255,10 +259,8 @@ public class Menu : MonoBehaviour
         switch (cosenLevel)
         {
             case 0:
-                SceneManager.LoadScene("Level1", LoadSceneMode.Additive);
+                SceneManager.LoadScene("Level1");
             break;
-
-
         }
 
         

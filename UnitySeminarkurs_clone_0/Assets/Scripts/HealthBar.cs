@@ -5,28 +5,30 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    Stats stats;
+    private Stats stats;
     public GameObject playerName;
 
-    public int health;
-    public int currentHealth;
+    private int health;
+    private int currentHealth;
 
     public Slider healthSlider;
+
+    private bool fistTime = true;
 
     void Awake() // gets called before Start
     {
         stats = playerName.GetComponent<Stats>();
     }
 
-    void Start()
-    {
-        health = stats.getHealth();
-        currentHealth = stats.getCurrentHealth();
-        healthSlider.value = (float) currentHealth / health;
-    }
 
     void Update()
     {
+        if (fistTime)
+        {
+            health = stats.getHealth();
+            fistTime = false;
+        }
+
         currentHealth = stats.getCurrentHealth();
         healthSlider.value = (float) currentHealth / health;
     }

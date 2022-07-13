@@ -6,41 +6,50 @@ public class Stats : MonoBehaviour
 {
     public int side;
     public int number;
-    public string name;
-    public int health;
-    public int attack;
-    public int movementRange;
-    public int attackRange;
-    int currentHealth;
+    private string nameHero;
+    private int numberHero;
+    private int health;
+    private int attack;
+    private int movementRange;
+    private int attackRange;
+    private int currentHealth;
 
-    /*
-    private void Awake() // is executed before Start
+    public GameObject[] figurines;
+   
+    private void Start() 
     {
         if (side == 0)
         {
-            name = HeldenWahl.names0Heroes[number];
-            health = HeldenWahl.health0Heroes[number];
-            attack = HeldenWahl.damage0Heroes[number];
-            movementRange = HeldenWahl.walkingRange0Heroes[number];
-            attackRange = HeldenWahl.attackingRange0Heroes[number];
+            numberHero = VariablesAcrossScenes.instance.number0Heroes[number];
+            nameHero = VariablesAcrossScenes.instance.names0Heroes[number];
+            health = VariablesAcrossScenes.instance.health0Heroes[number];
+            attack = VariablesAcrossScenes.instance.damage0Heroes[number];
+            movementRange = VariablesAcrossScenes.instance.walkingRange0Heroes[number];
+            attackRange = VariablesAcrossScenes.instance.attackingRange0Heroes[number];
         } 
         else if (side == 1)
         {
-            name = HeldenWahl.names1Heroes[number];
-            health = HeldenWahl.health1Heroes[number];
-            attack = HeldenWahl.damage1Heroes[number];
-            movementRange = HeldenWahl.walkingRange1Heroes[number];
-            attackRange = HeldenWahl.attackingRange1Heroes[number];
+            numberHero = VariablesAcrossScenes.instance.number1Heroes[number];
+            nameHero = VariablesAcrossScenes.instance.names1Heroes[number];
+            health = VariablesAcrossScenes.instance.health1Heroes[number];
+            attack = VariablesAcrossScenes.instance.damage1Heroes[number];
+            movementRange = VariablesAcrossScenes.instance.walkingRange1Heroes[number];
+            attackRange = VariablesAcrossScenes.instance.attackingRange1Heroes[number];
         }
 
-        Debug.Log(name + health + attack + movementRange + attackRange);
-    }
-    */
-    private void Start()
-    {
-        currentHealth = health;
-    }
+        Debug.Log(numberHero + " " + nameHero + " " + health + " " + attack + " " + movementRange + " " + attackRange);
+    
 
+        currentHealth = health;
+
+        for (int i = 0; i < figurines.Length; i++)
+        {
+            figurines[i].SetActive(false);
+        }
+
+        figurines[numberHero].SetActive(true);
+    }
+    
     public void setHealth( int newHealth)
     {
         health = newHealth;
@@ -60,7 +69,7 @@ public class Stats : MonoBehaviour
     {
         attackRange = newAttackRange;
     }
-
+    
     public int getHealth()
     {
         return health;

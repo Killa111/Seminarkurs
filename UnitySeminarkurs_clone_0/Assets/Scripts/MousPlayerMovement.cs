@@ -68,10 +68,36 @@ public class MousPlayerMovement : MonoBehaviour
                 } else if(hits[i].transform.name == nameMoveRange)             // checks if the MoveRange got hit
                 {
                     foundMoveRange = true;
-                }                
+                } 
             }
 
-            if (foundField == true & foundMoveRange == true)   
+            bool hitHero = false;
+
+            if (foundField == true)
+            {
+                Vector3 biggerHeight = new Vector3(0, 100, 0);   // lets the ray start from a bigger height
+                Ray ray2 = new Ray(hitUse.transform.position + biggerHeight, hitUse.transform.up * -1); // new Ray that starts in the middle of
+                                                                                                        // the Field and goes down, oppsite direction to up
+                RaycastHit[] hits2;
+
+                hits2 = Physics.RaycastAll(ray);                             // shoots ot the ray, stores everything it hits in hits2
+
+                for (int i = 0; i < hits2.Length; i++)                        // for loop goes through all the hits stored in hits2
+                {
+                    if (hits2[i].transform.tag == "Hero")                    // if a Hero got hit, a Hero stands on the field already
+                    {
+                        if (hits2[i].transform.name != gameObject.transform.name)   // checks if the Hero didn't hit itself
+                                                                                    // if the hero hit it selve it will skip 
+                                                                                    // the movement this round
+                        {
+                            hitHero = true;
+                        }                        
+                    }
+                }
+            }
+
+            // check if the Player klicked on a Field that is in the movementrange of the hero, and no other Hero is on the Field
+            if (foundField == true && foundMoveRange == true && hitHero == false) 
             {
                 meshAgent.SetDestination(hitUse.transform.position);        // move on the field that got hit
                 goGameCode.GetComponent<Game>().beginnWalkingAnimation();

@@ -1,19 +1,17 @@
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
     public bool isOnline = false;
 
-    private void Awake()
+    private void Start()
     {
-        /*
-         get variable isOnline
-        
-         */
+
     }
 
+    public GameObject goConfirmButton;
     public GameObject goReturnButton;
     public GameObject goWinnerSign;
     public TMP_Text goWinenerText;
@@ -72,38 +70,45 @@ public class Game : MonoBehaviour
 
     int progressRound = 0;          // stores which progress is made in this round
 
-    private void endGame()
+    public void endGame()
     {
-
+        SceneManager.LoadScene("Menus");
     }
 
+    public void reloadGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
     private void side0Won()
     {
+        goConfirmButton.SetActive(false);
+        goReturnButton.SetActive(false);
         goWinnerSign.SetActive(true);
         goWinenerText.text = "Player  0  Winns";
         goReturnButton.SetActive(false);
 
     }
-
+   
     private void side1Won()
     {
+        goConfirmButton.SetActive(false);
+        goReturnButton.SetActive(false);
         goWinnerSign.SetActive(true);
         goWinenerText.text = "Player  1  Winns";
         goReturnButton.SetActive(false);
     }
-
+   
     private void checkGameEnd()
     {
-        if (!go0Hero0.activeSelf && !go0Hero1.activeSelf && !go0Hero2.activeSelf)    // check if all Heros of side0 are beaten
+        if (dead0Heroes[0] && dead0Heroes[1] && dead0Heroes[2])    // check if all Heros of side0 are beaten
         {
             side1Won();
-            endGame();
         }
 
-        if (!go1Hero0.activeSelf && !go1Hero1.activeSelf && !go1Hero2.activeSelf)    // check if all Heros of side1 are beaten
+        if (dead1Heroes[0] && dead1Heroes[1] && dead1Heroes[2])    // check if all Heros of side1 are beaten
         {
             side0Won();
-            endGame();
         }
     }
 
@@ -190,6 +195,36 @@ public class Game : MonoBehaviour
         // reset progress
         heroChoosen = false;
         progressRound = 0;
+
+        // deactivate Movement/Attack
+
+        goAttackRange0Hero0.SetActive(false);
+        goAttackRange0Hero1.SetActive(false);
+        goAttackRange0Hero2.SetActive(false);
+        goAttackRange1Hero0.SetActive(false);
+        goAttackRange1Hero1.SetActive(false);
+        goAttackRange1Hero2.SetActive(false);
+
+        goMovementRange0Hero0.SetActive(false);
+        goMovementRange0Hero1.SetActive(false);
+        goMovementRange0Hero2.SetActive(false);
+        goMovementRange1Hero0.SetActive(false);
+        goMovementRange1Hero1.SetActive(false);
+        goMovementRange1Hero2.SetActive(false);
+
+        go0Hero0.GetComponent<MousPlayerAttack>().enabled = false;
+        go0Hero1.GetComponent<MousPlayerAttack>().enabled = false;
+        go0Hero2.GetComponent<MousPlayerAttack>().enabled = false;
+        go1Hero0.GetComponent<MousPlayerAttack>().enabled = false;
+        go1Hero1.GetComponent<MousPlayerAttack>().enabled = false;
+        go1Hero2.GetComponent<MousPlayerAttack>().enabled = false;
+
+        go0Hero0.GetComponent<MousPlayerMovement>().enabled = false;
+        go0Hero1.GetComponent<MousPlayerMovement>().enabled = false;
+        go0Hero2.GetComponent<MousPlayerMovement>().enabled = false;
+        go1Hero0.GetComponent<MousPlayerMovement>().enabled = false;
+        go1Hero1.GetComponent<MousPlayerMovement>().enabled = false;
+        go1Hero2.GetComponent<MousPlayerMovement>().enabled = false;
     }
 
     public void beginnWalkingAnimation()
@@ -263,6 +298,14 @@ public class Game : MonoBehaviour
         }
     }
 
+    public void endRound()
+    {
+        heroesAttacked[0] = true;
+        heroesAttacked[1] = true;
+        heroesAttacked[2] = true;
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -280,7 +323,7 @@ public class Game : MonoBehaviour
             }
         }
         // only does the rest if there is no moving animation
-        else if (isOnline = false)            // checks if Game is online played
+        else if (isOnline == false)            // checks if Game is online played
         {
 
             if (canChooseHero) { chooseHero(); };
