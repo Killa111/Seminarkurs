@@ -1242,6 +1242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7563036439084073720, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
+    - {fileID: 1795763169106590923, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
 --- !u!1001 &254609201
 PrefabInstance:
@@ -1980,6 +1981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7563036439084073720, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
+    - {fileID: 1795763169106590923, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
 --- !u!4 &471052008 stripped
 Transform:
@@ -2253,6 +2255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7563036439084073720, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
+    - {fileID: 1795763169106590923, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
 --- !u!1001 &632406221
 PrefabInstance:
@@ -3919,6 +3922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7563036439084073720, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
+    - {fileID: 1795763169106590923, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
 --- !u!1 &1041735564 stripped
 GameObject:
@@ -5987,6 +5991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7563036439084073720, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
+    - {fileID: 1795763169106590923, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
 --- !u!1001 &1513462498
 PrefabInstance:
@@ -6616,6 +6621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7563036439084073720, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
+    - {fileID: 1795763169106590923, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3684022f94c26f247ac14f50490a246b, type: 3}
 --- !u!1001 &1711619963
 PrefabInstance:
